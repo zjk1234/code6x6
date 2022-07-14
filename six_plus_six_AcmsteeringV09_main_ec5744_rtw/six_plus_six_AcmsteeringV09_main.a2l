@@ -1,0 +1,1779 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     six_plus_six_AcmsteeringV09_main.a2l
+ *
+ * Code generation for model "six_plus_six_AcmsteeringV09_main".
+ *
+ * Model version              : 1.2701
+ * Simulink Coder version : 8.6 (R2014a) 27-Dec-2013
+ * C source code generated on : Wed Nov 25 12:58:47 2020
+ * 
+ * Target selection: ec5744.tlc
+ * Embedded hardware selection: Freescale MPC5500
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ECUCoderProject "ECUCoder Project"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_FIRST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_lf  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_lf@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_lm  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_lm@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_lr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_lr@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_rf  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_rf@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_rm  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_rm@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      guzhang_rr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@guzhang_rr@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      kd1  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@kd1@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      ki1  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@ki1@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      kp1  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@kp1@ 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      ESP_switch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@ESP_switch@ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      RC_switch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@RC_switch@ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      TCS_switch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@TCS_switch@ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      ag_thr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      @MemoryAddress@ag_thr@ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      six_plus_six_AcmsteeringV09_main_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS1_1SOC
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@BMS1_1SOC@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Pitching
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Pitching@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Rolling
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Rolling@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Heading
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Heading@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Longitude
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Longitude@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Latitude
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Latitude@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      EastSpd
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@EastSpd@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Altitude
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Altitude@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      NorthSpd
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@NorthSpd@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SkySpd
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@SkySpd@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Yacceleration
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Yacceleration@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Zacceleration
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Zacceleration@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Zangularrate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Zangularrate@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Xacceleration
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Xacceleration@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Xangularrate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Xangularrate@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Yangularrate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@Yangularrate@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_5SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_5SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS1_SOC
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@BMS1_SOC@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_4SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_4SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_3SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_3SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_2SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_2SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_1SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_1SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMS1_2SOC
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@BMS1_2SOC@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      MCU0_SpeedFdk
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@MCU0_SpeedFdk@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      acc_y
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       @MemoryAddress@acc_y@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_lf
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_lf@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_lm
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_lm@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_lr
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_lr@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_rf
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_rf@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_rm
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_rm@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      s_act_rr
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@s_act_rr@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_l_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_l_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_r_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_r_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_dem_l_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_dem_l_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_dem_r_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_dem_r_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_adjust_l_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_adjust_l_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_adjust_r_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_adjust_r_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_rm_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_rm_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_lm_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_lm_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_rr_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_rr_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_rf_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_rf_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_lr_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_lr_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_pid_lf_adjust
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_pid_lf_adjust@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_lf_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_lf_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_lm_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_lm_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_lr_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_lr_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_rf_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_rf_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_rm_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_rm_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      trq_out_rr_forward
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@trq_out_rr_forward@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_lf
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_lf@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_lm
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_lm@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_lr
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_lr@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_rf
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_rf@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_rm
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_rm@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      flag_rr
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@flag_rr@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      delta_Twending_dem
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       @MemoryAddress@delta_Twending_dem@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      mode_dem_out
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       @MemoryAddress@mode_dem_out@
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      TCS_mode
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      six_plus_six_AcmsteeringV09_main_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       @MemoryAddress@TCS_mode@
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      six_plus_six_AcmsteeringV09_main_CM_double
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%15.10"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      six_plus_six_AcmsteeringV09_main_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      six_plus_six_AcmsteeringV09_main_CM_int8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       six_plus_six_AcmsteeringV09_main
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_Data_input
+        Root_InputSignalProcess
+        Root_MainControl
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Data_input
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input"
+      /begin SUB_GROUP
+        S1_10
+        S1_11
+        S1_4
+        S1_5
+        S1_6
+        S1_7
+        S1_8
+        S1_9
+        S1_BMS1
+        S1_BMS1_1
+        S1_BMS1_2
+        S1_MCU0
+        S1_MCU0_1
+        S1_MCU0_2
+        S1_MCU0_3
+        S1_MCU0_4
+        S1_MCU0_5
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_InputSignalProcess
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/InputSignalProcess"
+      /begin REF_MEASUREMENT
+        acc_y
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_MainControl
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl"
+      /begin SUB_GROUP
+        S3_mode_control
+        S3_mode_switch
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_10
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/10"
+      /begin REF_MEASUREMENT
+        Heading
+        Rolling
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_11
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/11"
+      /begin REF_MEASUREMENT
+        Pitching
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_4
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/4"
+      /begin REF_MEASUREMENT
+        Xangularrate
+        Yangularrate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_5
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/5"
+      /begin REF_MEASUREMENT
+        Xacceleration
+        Zangularrate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_6
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/6"
+      /begin REF_MEASUREMENT
+        Yacceleration
+        Zacceleration
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_7
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/7"
+      /begin REF_MEASUREMENT
+        NorthSpd
+        SkySpd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_8
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/8"
+      /begin REF_MEASUREMENT
+        Altitude
+        EastSpd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_9
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/9"
+      /begin REF_MEASUREMENT
+        Latitude
+        Longitude
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_BMS1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1"
+      /begin SUB_GROUP
+        S18_BMS1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_BMS1_2
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1-2"
+      /begin SUB_GROUP
+        S19_BMS1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_BMS1_1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1_1"
+      /begin SUB_GROUP
+        S20_BMS1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0"
+      /begin SUB_GROUP
+        S35_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0_1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_1"
+      /begin SUB_GROUP
+        S36_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0_2
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_2"
+      /begin SUB_GROUP
+        S37_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0_3
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_3"
+      /begin SUB_GROUP
+        S38_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0_4
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_4"
+      /begin SUB_GROUP
+        S39_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_MCU0_5
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_5"
+      /begin SUB_GROUP
+        S40_MCU0
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_mode_control
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control"
+      /begin SUB_GROUP
+        S407_backward
+        S407_forward
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_mode_switch
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_switch"
+      /begin REF_MEASUREMENT
+        mode_dem_out
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S18_BMS1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1/BMS1"
+      /begin REF_MEASUREMENT
+        BMS1_SOC
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_BMS1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1-2/BMS1"
+      /begin REF_MEASUREMENT
+        BMS1_2SOC
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S20_BMS1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/BMS1_1/BMS1"
+      /begin REF_MEASUREMENT
+        BMS1_1SOC
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S35_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S36_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_1/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_1SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S37_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_2/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_2SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S38_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_3/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_3SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S39_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_4/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_4SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S40_MCU0
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/Data_input/MCU0_5/MCU0"
+      /begin REF_MEASUREMENT
+        MCU0_5SpeedFdk
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S407_backward
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward"
+      /begin SUB_GROUP
+        S410_backward
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S407_forward
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward"
+      /begin SUB_GROUP
+        S413_forward
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S410_backward
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward"
+      /begin SUB_GROUP
+        S422_Drive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S413_forward
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward"
+      /begin SUB_GROUP
+        S877_Drive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S422_Drive
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive"
+      /begin SUB_GROUP
+        S424_____
+        S424_______TCS
+        S424________
+        S424___________
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        ag_thr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S877_Drive
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive"
+      /begin SUB_GROUP
+        S879_____
+        S879_______TCS
+        S879________
+        S879___________
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        ag_thr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S424_____
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/容错控制"
+      /begin REF_CHARACTERISTIC
+        RC_switch
+        guzhang_lf
+        guzhang_lm
+        guzhang_lr
+        guzhang_rf
+        guzhang_rm
+        guzhang_rr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S424___________
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/目标直驶力矩确定模块"
+      /begin REF_CHARACTERISTIC
+        ag_thr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S424________
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/车辆稳定性控制"
+      /begin REF_CHARACTERISTIC
+        ESP_switch
+        ag_thr
+        kd1
+        ki1
+        kp1
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S424_______TCS
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/驱动防滑控制TCS"
+      /begin SUB_GROUP
+        S575___TCS
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S879_____
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/容错控制"
+      /begin REF_CHARACTERISTIC
+        RC_switch
+        guzhang_lf
+        guzhang_lm
+        guzhang_lr
+        guzhang_rf
+        guzhang_rm
+        guzhang_rr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S879___________
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/目标直驶力矩确定模块"
+      /begin REF_CHARACTERISTIC
+        ag_thr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S879________
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/车辆稳定性控制"
+      /begin REF_CHARACTERISTIC
+        ESP_switch
+        ag_thr
+        kd1
+        ki1
+        kp1
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        delta_Twending_dem
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S879_______TCS
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS"
+      /begin SUB_GROUP
+        S1030___TCS
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S575___TCS
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/驱动防滑控制TCS/直行TCS"
+      /begin SUB_GROUP
+        S703___
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1030___TCS
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS"
+      /begin SUB_GROUP
+        S1158_Subsystem
+        S1158_Subsystem1
+        S1158_Subsystem2
+        S1158_Subsystem3
+        S1158_Subsystem4
+        S1158_Subsystem5
+        S1158___
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S703___
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/backward/backward/Drive/驱动防滑控制TCS/直行TCS/直行"
+      /begin REF_CHARACTERISTIC
+        TCS_switch
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem"
+      /begin REF_MEASUREMENT
+        s_act_lf
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem1"
+      /begin REF_MEASUREMENT
+        s_act_lm
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem2
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem2"
+      /begin REF_MEASUREMENT
+        s_act_lr
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem3
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem3"
+      /begin REF_MEASUREMENT
+        s_act_rf
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem4
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem4"
+      /begin REF_MEASUREMENT
+        s_act_rm
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158_Subsystem5
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/Subsystem5"
+      /begin REF_MEASUREMENT
+        s_act_rr
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1158___
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行"
+      /begin SUB_GROUP
+        S1167_Subsystem
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        TCS_switch
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        TCS_mode
+        flag_lf
+        flag_lm
+        flag_lr
+        flag_rf
+        flag_rm
+        flag_rr
+        trq_adjust_l_forward
+        trq_adjust_r_forward
+        trq_dem_l_forward
+        trq_dem_r_forward
+        trq_out_l_forward
+        trq_out_lf_forward
+        trq_out_lm_forward
+        trq_out_lr_forward
+        trq_out_r_forward
+        trq_out_rf_forward
+        trq_out_rm_forward
+        trq_out_rr_forward
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1167_Subsystem
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem"
+      /begin SUB_GROUP
+        S1182_Subsystem
+        S1182_Subsystem1
+        S1182_Subsystem2
+        S1182_Subsystem3
+        S1182_Subsystem4
+        S1182_Subsystem5
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem"
+      /begin REF_MEASUREMENT
+        trq_pid_lf_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem1
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem1"
+      /begin REF_MEASUREMENT
+        trq_pid_lr_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem2
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem2"
+      /begin REF_MEASUREMENT
+        trq_pid_rf_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem3
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem3"
+      /begin REF_MEASUREMENT
+        trq_pid_rr_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem4
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem4"
+      /begin REF_MEASUREMENT
+        trq_pid_lm_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1182_Subsystem5
+      /* Long identifier        */       "six_plus_six_AcmsteeringV09_main/MainControl/mode_control/forward/forward/Drive/驱动防滑控制TCS/直行TCS/直行/Subsystem/Subsystem5"
+      /begin REF_MEASUREMENT
+        trq_pid_rm_adjust
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF six_plus_six_AcmsteeringV09_main.a2l */

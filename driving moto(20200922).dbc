@@ -1,0 +1,837 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ ErrorLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_TABLE_ FaultStatus 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_TABLE_ AllowStatus 1 "允许" 0 "不允许" ;
+VAL_TABLE_ GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_TABLE_ SelfCheck 3 "无效" 2 "保留" 1 "有故障" 0 "无错误" ;
+VAL_TABLE_ WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_TABLE_ WorkMode 2 "R档" 1 "D档" 0 "N档" ;
+VAL_TABLE_ CtrlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_TABLE_ EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+
+
+BO_ 2353067559 VCU1_7: 8 Vector__XXX
+ SG_ VCU1_7LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_7TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_7SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_7GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_7CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_7EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353067303 VCU1_6: 8 Vector__XXX
+ SG_ VCU1_6LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_6TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_6SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_6GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_6CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_6EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521590 MCU2_7: 8 Vector__XXX
+ SG_ MCU2_7MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_7MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521589 MCU2_6: 8 Vector__XXX
+ SG_ MCU2_6MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_6MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194742 MCU1_7: 8 Vector__XXX
+ SG_ MCU1_7ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_7MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_7PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_7Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_7Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194741 MCU1_6: 8 Vector__XXX
+ SG_ MCU1_6ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_6MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_6PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_6Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_6Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194486 MCU0_7: 8 Vector__XXX
+ SG_ MCU0_7TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_7EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_7ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_7HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_7LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_7TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_7SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_7GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_7ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_7WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194485 MCU0_6: 8 Vector__XXX
+ SG_ MCU0_6TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_6EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_6ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_6HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_6LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_6TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_6SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_6GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_6ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_6WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353067047 VCU1_5: 8 Vector__XXX
+ SG_ VCU1_5LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_5TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_5SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_5GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_5CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_5EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353066791 VCU1_4: 8 Vector__XXX
+ SG_ VCU1_4LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_4TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_4SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_4GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_4CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_4EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353066535 VCU1_3: 8 Vector__XXX
+ SG_ VCU1_3LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_3TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_3SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_3GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_3CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_3EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353066279 VCU1_2: 8 Vector__XXX
+ SG_ VCU1_2LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_2TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_2SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_2GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_2CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_2EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353066023 VCU1_1: 8 Vector__XXX
+ SG_ VCU1_1LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_1TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_1SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_1GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_1CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_1EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521588 MCU2_5: 8 Vector__XXX
+ SG_ MCU2_5MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_5MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521587 MCU2_4: 8 Vector__XXX
+ SG_ MCU2_4MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_4MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521586 MCU2_3: 8 Vector__XXX
+ SG_ MCU2_3MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_3MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521585 MCU2_2: 8 Vector__XXX
+ SG_ MCU2_2MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_2MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521584 MCU2_1: 8 Vector__XXX
+ SG_ MCU2_1MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_1MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194740 MCU1_5: 8 Vector__XXX
+ SG_ MCU1_5ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_5MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_5PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_5Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_5Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194739 MCU1_4: 8 Vector__XXX
+ SG_ MCU1_4ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_4MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_4PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_4Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_4Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194738 MCU1_3: 8 Vector__XXX
+ SG_ MCU1_3ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_3MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_3PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_3Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_3Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194737 MCU1_2: 8 Vector__XXX
+ SG_ MCU1_2ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_2MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_2PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_2Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_2Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194736 MCU1_1: 8 Vector__XXX
+ SG_ MCU1_1ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_1MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_1PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_1Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_1Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194484 MCU0_5: 8 Vector__XXX
+ SG_ MCU0_5TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_5EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_5ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_5HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_5LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_5TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_5SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_5GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_5ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_5WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194483 MCU0_4: 8 Vector__XXX
+ SG_ MCU0_4TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_4EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_4ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_4HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_4LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_4TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_4SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_4GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_4ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_4WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194482 MCU0_3: 8 Vector__XXX
+ SG_ MCU0_3TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_3EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_3ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_3HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_3LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_3TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_3SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_3GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_3ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_3WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194481 MCU0_2: 8 Vector__XXX
+ SG_ MCU0_2TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_2EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_2ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_2HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_2LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_2TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_2SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_2GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_2ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_2WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194480 MCU0_1: 8 Vector__XXX
+ SG_ MCU0_1TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_1EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_1ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_1HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_1LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_1TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_1SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_1GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_1ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_1WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566521583 MCU2: 8 Vector__XXX
+ SG_ MCU2_MotorStallingFault : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_UdcDetectionFault : 41|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_TempSensorFault : 33|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_ActieDischargingFault : 35|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_IdcSensorFault : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_IuSensorFault : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_IvSensorFault : 29|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_FaultLevel : 31|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_ControllerOverload : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_CanCommunicationFault : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_MemoryFault : 21|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_DownratingFault : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_IGBTFault : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_MotorOverTemp : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_ControllerOverTemp : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_MotorOverSpeed : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_RotaryInverterFault : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_UnderVoltage : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_OverVoltage : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU2_MotorOverLoad : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365194735 MCU1: 8 Vector__XXX
+ SG_ MCU1_ControlTemp : 63|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_MotorTemp : 55|8@0+ (1,-40) [-40|215] "度" Vector__XXX
+ SG_ MCU1_PowerFdk : 39|16@0+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ MCU1_Idc : 23|16@0+ (0.1,-1600) [-1600|1600] "A" Vector__XXX
+ SG_ MCU1_Udc : 7|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+
+BO_ 2365194479 MCU0: 8 Vector__XXX
+ SG_ MCU0_TorqueMax : 47|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_EmergShutDown : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_ShutDowAllow : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_HighVol : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_LiftCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU0_TorqueFdk : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ MCU0_SpeedFdk : 15|16@0+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ MCU0_GearStatus : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU0_ControlMode : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU0_WorkStatus : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2353065767 VCU1: 8 Vector__XXX
+ SG_ VCU1_LifeCnt : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU1_TorqueRef : 31|16@0+ (0.1,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ VCU1_SpeedMax : 15|16@0+ (1,0) [0|10000] "rpm" Vector__XXX
+ SG_ VCU1_GearCmd : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU1_CtrlModel : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU1_EnableReq : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "jingwei_beilg";
+BA_ "VFrameFormat" BO_ 2353067559 3;
+BA_ "VFrameFormat" BO_ 2353067303 3;
+BA_ "VFrameFormat" BO_ 2566521590 3;
+BA_ "VFrameFormat" BO_ 2566521589 3;
+BA_ "VFrameFormat" BO_ 2365194742 3;
+BA_ "VFrameFormat" BO_ 2365194741 3;
+BA_ "VFrameFormat" BO_ 2365194486 3;
+BA_ "VFrameFormat" BO_ 2365194485 3;
+BA_ "VFrameFormat" BO_ 2353067047 3;
+BA_ "VFrameFormat" BO_ 2353066791 3;
+BA_ "VFrameFormat" BO_ 2353066535 3;
+BA_ "VFrameFormat" BO_ 2353066279 3;
+BA_ "VFrameFormat" BO_ 2353066023 3;
+BA_ "VFrameFormat" BO_ 2566521588 3;
+BA_ "VFrameFormat" BO_ 2566521587 3;
+BA_ "VFrameFormat" BO_ 2566521586 3;
+BA_ "VFrameFormat" BO_ 2566521585 3;
+BA_ "VFrameFormat" BO_ 2566521584 3;
+BA_ "VFrameFormat" BO_ 2365194740 3;
+BA_ "VFrameFormat" BO_ 2365194739 3;
+BA_ "VFrameFormat" BO_ 2365194738 3;
+BA_ "VFrameFormat" BO_ 2365194737 3;
+BA_ "VFrameFormat" BO_ 2365194736 3;
+BA_ "VFrameFormat" BO_ 2365194484 3;
+BA_ "VFrameFormat" BO_ 2365194483 3;
+BA_ "VFrameFormat" BO_ 2365194482 3;
+BA_ "VFrameFormat" BO_ 2365194481 3;
+BA_ "VFrameFormat" BO_ 2365194480 3;
+BA_ "VFrameFormat" BO_ 2566521583 3;
+BA_ "VFrameFormat" BO_ 2365194735 3;
+BA_ "VFrameFormat" BO_ 2365194479 3;
+BA_ "VFrameFormat" BO_ 2353065767 3;
+BA_ "GenSigStartValue" SG_ 2353067559 VCU1_7TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2353067303 VCU1_6TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2365194742 MCU1_7ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194742 MCU1_7MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194742 MCU1_7Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194742 MCU1_7Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194741 MCU1_6ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194741 MCU1_6MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194741 MCU1_6Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194741 MCU1_6Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194486 MCU0_7TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194486 MCU0_7TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194486 MCU0_7SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194485 MCU0_6TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194485 MCU0_6TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194485 MCU0_6SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2353067047 VCU1_5TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2353066791 VCU1_4TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2353066535 VCU1_3TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2353066279 VCU1_2TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2353066023 VCU1_1TorqueRef 10000;
+BA_ "GenSigStartValue" SG_ 2365194740 MCU1_5ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194740 MCU1_5MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194740 MCU1_5Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194740 MCU1_5Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194739 MCU1_4ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194739 MCU1_4MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194739 MCU1_4Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194739 MCU1_4Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194738 MCU1_3ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194738 MCU1_3MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194738 MCU1_3Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194738 MCU1_3Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194737 MCU1_2ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194737 MCU1_2MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194737 MCU1_2Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194737 MCU1_2Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194736 MCU1_1ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194736 MCU1_1MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194736 MCU1_1Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194736 MCU1_1Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194484 MCU0_5TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194484 MCU0_5TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194484 MCU0_5SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194483 MCU0_4TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194483 MCU0_4TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194483 MCU0_4SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194482 MCU0_3TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194482 MCU0_3TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194482 MCU0_3SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194481 MCU0_2TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194481 MCU0_2TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194481 MCU0_2SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194480 MCU0_1TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194480 MCU0_1TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194480 MCU0_1SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194735 MCU1_ControlTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194735 MCU1_MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365194735 MCU1_Idc 16000;
+BA_ "GenSigStartValue" SG_ 2365194735 MCU1_Udc 0;
+BA_ "GenSigStartValue" SG_ 2365194479 MCU0_TorqueMax 10000;
+BA_ "GenSigStartValue" SG_ 2365194479 MCU0_TorqueFdk 10000;
+BA_ "GenSigStartValue" SG_ 2365194479 MCU0_SpeedFdk 10000;
+BA_ "GenSigStartValue" SG_ 2353065767 VCU1_TorqueRef 10000;
+VAL_ 2353067559 VCU1_7GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353067559 VCU1_7CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353067559 VCU1_7EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2353067303 VCU1_6GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353067303 VCU1_6CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353067303 VCU1_6EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2566521590 MCU2_7MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521590 MCU2_7MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521589 MCU2_6MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2365194486 MCU0_7EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194486 MCU0_7ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194486 MCU0_7HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194486 MCU0_7GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194486 MCU0_7ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194486 MCU0_7WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2365194485 MCU0_6EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194485 MCU0_6ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194485 MCU0_6HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194485 MCU0_6GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194485 MCU0_6ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194485 MCU0_6WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2353067047 VCU1_5GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353067047 VCU1_5CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353067047 VCU1_5EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2353066791 VCU1_4GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353066791 VCU1_4CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353066791 VCU1_4EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2353066535 VCU1_3GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353066535 VCU1_3CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353066535 VCU1_3EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2353066279 VCU1_2GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353066279 VCU1_2CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353066279 VCU1_2EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2353066023 VCU1_1GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353066023 VCU1_1CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353066023 VCU1_1EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+VAL_ 2566521588 MCU2_5MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521588 MCU2_5MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521587 MCU2_4MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521586 MCU2_3MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521585 MCU2_2MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521584 MCU2_1MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2365194484 MCU0_5EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194484 MCU0_5ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194484 MCU0_5HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194484 MCU0_5GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194484 MCU0_5ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194484 MCU0_5WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2365194483 MCU0_4EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194483 MCU0_4ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194483 MCU0_4HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194483 MCU0_4GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194483 MCU0_4ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194483 MCU0_4WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2365194482 MCU0_3EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194482 MCU0_3ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194482 MCU0_3HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194482 MCU0_3GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194482 MCU0_3ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194482 MCU0_3WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2365194481 MCU0_2EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194481 MCU0_2ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194481 MCU0_2HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194481 MCU0_2GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194481 MCU0_2ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194481 MCU0_2WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2365194480 MCU0_1EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194480 MCU0_1ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194480 MCU0_1HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194480 MCU0_1GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194480 MCU0_1ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194480 MCU0_1WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2566521583 MCU2_MotorStallingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_UdcDetectionFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_TempSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_ActieDischargingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_IdcSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_IuSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_IvSensorFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_FaultLevel 3 "3级故障" 2 "2级故障" 1 "1级故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_ControllerOverload 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_CanCommunicationFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_MemoryFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_DownratingFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_IGBTFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_MotorOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_ControllerOverTemp 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_MotorOverSpeed 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_RotaryInverterFault 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_UnderVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_OverVoltage 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2566521583 MCU2_MotorOverLoad 3 "无效" 2 "保留" 1 "故障" 0 "无故障" ;
+VAL_ 2365194479 MCU0_EmergShutDown 1 "允许" 0 "不允许" ;
+VAL_ 2365194479 MCU0_ShutDowAllow 1 "允许" 0 "不允许" ;
+VAL_ 2365194479 MCU0_HighVol 1 "允许" 0 "不允许" ;
+VAL_ 2365194479 MCU0_GearStatus 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2365194479 MCU0_ControlMode 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2365194479 MCU0_WorkStatus 3 "保留" 2 "错误" 1 "活动" 0 "未活动" ;
+VAL_ 2353065767 VCU1_GearCmd 2 "R档" 1 "D档" 0 "N档" ;
+VAL_ 2353065767 VCU1_CtrlModel 1 "速度控制" 0 "扭矩控制" ;
+VAL_ 2353065767 VCU1_EnableReq 3 "无效" 2 "保留" 1 "请求" 0 "无请求" ;
+
